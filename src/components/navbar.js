@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/client";
 
-const navbar = () => {
+const Navbar = () => {
   const [isExpanded, toggleExpansion] = useState(false);
   return (
     <header
@@ -55,4 +55,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

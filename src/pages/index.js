@@ -43,10 +43,10 @@ export default function Home() {
     if (session) {
       router.push(`/document/${uuidV4()}`);
     }
-  }, [session]);
+  }, [session, router]);
   return (
     <div>
-      {loading && <p>Loading..</p>}
+      {/* {loading && <p>Loading..</p>} */}
       {!session && (
         <>
           <Welcome />

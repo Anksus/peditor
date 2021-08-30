@@ -17,7 +17,7 @@ const TOOLBAR_OPTIONS = [
   ["clean"],
 ];
 
-export default function textEditor() {
+export default function TextEditor() {
   const [socket, setSocket] = useState();
   const [quill, setQuill] = useState();
 
