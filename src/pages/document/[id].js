@@ -11,6 +11,7 @@ const TextEditor = dynamic(() => import("../../components/textEditor"), {
 export default function Editor() {
   const router = useRouter();
   const [session, loading] = useSession();
+  const pid = router.query.id;
   // useEffect(() => {
 
   //   if (!session) {
@@ -19,7 +20,7 @@ export default function Editor() {
   // }, [session, router]);
   return (
     <div>
-      {!session && <Welcome />}
+      {!session && <Welcome props={pid} />}
       {session && <TextEditor />}
     </div>
   );

@@ -1,7 +1,13 @@
 import { signIn, signOut, useSession } from "next-auth/client";
 import Navbar from "../components/navbar";
 
-const Welcome = () => {
+const Welcome = (props) => {
+  console.log(props);
+  if (props == undefined) {
+    props = "";
+  } else {
+    props = "document" + props;
+  }
   return (
     <div className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 h-screen">
       <Navbar />
@@ -20,7 +26,9 @@ const Welcome = () => {
             <button
               className="text-2xl font-bold rounded-md  px-3 text-gray-900 bg-gradient-to-r from-green-400 to-blue-500 hover:from-yellow-500 hover:to-pink-500 focus:outline-none"
               onClick={() =>
-                signIn("google", { callbackUrl: "http://localhost:3000/" })
+                signIn("google", {
+                  callbackUrl: `https://peditor.anksus.me/${props}`,
+                })
               }
             >
               Get started
