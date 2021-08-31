@@ -2,7 +2,7 @@ import { signIn, signOut, useSession } from "next-auth/client";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import Welcome from "../components/welcome";
+import Welcome from "../../components/welcome";
 
 const TextEditor = dynamic(() => import("../../components/textEditor"), {
   ssr: false,
