@@ -6,7 +6,7 @@ const Welcome = (props) => {
   if (props == undefined) {
     props = "";
   } else {
-    props = "document" + props.props;
+    props = "document" + "/" + props.props;
   }
   return (
     <div className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 h-screen">
