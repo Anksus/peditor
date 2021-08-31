@@ -3,7 +3,7 @@ import Navbar from "../components/navbar";
 
 const Welcome = (props) => {
   console.log(props);
-  if (props == undefined) {
+  if (props.props == undefined) {
     props = "";
   } else {
     props = "document" + "/" + props.props;
